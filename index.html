@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canto Estética Automotiva | Brilho e Perfeição</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a0a0a;
+            color: #f8fafc;
+            scroll-behavior: smooth;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-card {
+            background: #171717;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: #3b82f6;
+            transform: scale(1.02);
+            background: #1c1c1c;
+        }
+
+        .review-card {
+            background: linear-gradient(145deg, #1a1a1a, #111);
+            border-left: 4px solid #3b82f6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5548996531002" target="_blank" class="whatsapp-float bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300" title="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="glass-nav fixed w-full z-50 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-tighter">
+            CANTO <span class="text-blue-500">ESTÉTICA</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest">
+            <a href="#inicio" class="hover:text-blue-500 transition-colors">Início</a>
+            <a href="#sobre" class="hover:text-blue-500 transition-colors">Sobre</a>
+            <a href="#servicos" class="hover:text-blue-500 transition-colors">Serviços</a>
+            <a href="#avaliacoes" class="hover:text-blue-500 transition-colors">Avaliações</a>
+            <a href="#contato" class="hover:text-blue-500 transition-colors">Contato</a>
+        </div>
+        <a href="https://wa.me/5548996531002" target="_blank" class="btn-primary px-5 py-2 rounded-full text-sm font-bold uppercase">Agende Já</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image (Using first screenshot as hero) -->
+        <div class="absolute inset-0 z-0">
+            <img src="imagens site/Captura de tela 2026-09-16 125857.png" class="w-full h-full object-cover opacity-40" alt="Background Hero">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-[#0a0a0a]"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="text-5xl md:text-8xl font-extrabold mb-6 leading-tight">
+                Seu carro <span class="text-gradient">impecável</span>,<br>como novo.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                Referência em estética automotiva em Palhoça. Brilho intenso, limpeza profunda e a atenção que seu veículo merece.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="https://wa.me/5548996531002" target="_blank" class="btn-primary px-8 py-4 rounded-full text-lg font-bold flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Agendar Agora
+                </a>
+                <a href="#servicos" class="px-8 py-4 rounded-full text-lg font-bold border border-white/20 hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+                    Ver Serviços
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <img src="imagens site/Captura de tela 2026-09-16 130037.png" class="rounded-2xl shadow-2xl border border-white/10" alt="Trabalho Canto Estética">
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="text-4xl font-bold mb-6">Excelência em <span class="text-blue-500">Cada Detalhe</span></h2>
+                <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                    Na <strong>Canto Estética Automotiva</strong>, transformamos a aparência do seu veículo. Nossa missão é entregar mais do que uma simples lavagem; entregamos a sensação de carro novo.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-500/20 p-3 rounded-lg text-blue-500">
+                            <i class="fas fa-magic text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Brilho Impecável</h4>
+                            <p class="text-sm text-gray-500">Veículos brilhantes e com acabamento premium.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-500/20 p-3 rounded-lg text-blue-500">
+                            <i class="fas fa-wind text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Aroma Agradável</h4>
+                            <p class="text-sm text-gray-500">Limpeza profunda com fragrâncias exclusivas.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-500/20 p-3 rounded-lg text-blue-500">
+                            <i class="fas fa-user-check text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Equipe Profissional</h4>
+                            <p class="text-sm text-gray-500">Atendimento atencioso e serviço de alta qualidade.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-500/20 p-3 rounded-lg text-blue-500">
+                            <i class="fas fa-truck-loading text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Busca e Entrega</h4>
+                            <p class="text-sm text-gray-500">Comodidade total para simplificar a sua rotina.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-24 bg-[#0f0f0f] px-6">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">Nossos <span class="text-blue-500">Serviços</span></h2>
+            <p class="text-gray-500 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Utilizamos os melhores produtos e técnicas do mercado para garantir que seu carro receba o tratamento ideal.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="service-card rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+                <img src="imagens site/Captura de tela 2026-09-16 130057.png" class="w-full h-56 object-cover" alt="Lavagem Detalhada">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-soap text-blue-500"></i> Lavagem Detalhada</h3>
+                    <p class="text-gray-500 text-sm mb-4">Limpeza minuciosa de cada canto do veículo, removendo toda a sujeira acumulada.</p>
+                    <a href="https://wa.me/5548996531002" class="text-blue-500 font-bold text-sm hover:underline">Saber mais &rarr;</a>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                <img src="imagens site/Captura de tela 2026-09-16 130135.png" class="w-full h-56 object-cover" alt="Polimento">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-magic text-blue-500"></i> Polimento Técnico</h3>
+                    <p class="text-gray-500 text-sm mb-4">Remoção de riscos superficiais e restauração do brilho original da pintura.</p>
+                    <a href="https://wa.me/5548996531002" class="text-blue-500 font-bold text-sm hover:underline">Saber mais &rarr;</a>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+                <img src="imagens site/Captura de tela 2026-09-16 130159.png" class="w-full h-56 object-cover" alt="Higienização Interna">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-wind text-blue-500"></i> Higienização Interna</h3>
+                    <p class="text-gray-500 text-sm mb-4">Limpeza profunda de bancos, teto e carpetes com aroma exclusivo.</p>
+                    <a href="https://wa.me/5548996531002" class="text-blue-500 font-bold text-sm hover:underline">Saber mais &rarr;</a>
+                </div>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+                <img src="imagens site/Captura de tela 2026-09-16 130224.png" class="w-full h-56 object-cover" alt="Proteção de Pintura">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-shield-alt text-blue-500"></i> Proteção de Pintura</h3>
+                    <p class="text-gray-500 text-sm mb-4">Aplicação de ceras e selantes de alta performance para proteção duradoura.</p>
+                    <a href="https://wa.me/5548996531002" class="text-blue-500 font-bold text-sm hover:underline">Saber mais &rarr;</a>
+                </div>
+            </div>
+            <!-- Service 5 -->
+            <div class="service-card rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+                <img src="imagens site/Captura de tela 2026-09-16 130310.png" class="w-full h-56 object-cover" alt="Estética de Rodas">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-circle-notch text-blue-500"></i> Estética de Rodas</h3>
+                    <p class="text-gray-500 text-sm mb-4">Limpeza técnica de rodas e pneus, deixando-os com aspecto de novos.</p>
+                    <a href="https://wa.me/5548996531002" class="text-blue-500 font-bold text-sm hover:underline">Saber mais &rarr;</a>
+                </div>
+            </div>
+            <!-- Service 6 -->
+            <div class="service-card rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+                <img src="imagens site/Captura de tela 2026-09-16 130822.png" class="w-full h-56 object-cover" alt="Acabamento Premium">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fas fa-magic text-blue-500"></i> Acabamento Premium</h3>
+                    <p class="text-gray-500 text-sm mb-4">O toque final que garante a perfeição e o brilho espelhado.</p>
+                    <a href="https://wa.me/5548996531002" class="text-blue-500 font-bold text-sm hover:underline">Saber mais &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="avaliacoes" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">Quem <span class="text-blue-500">confia</span> no nosso trabalho</h2>
+            <p class="text-gray-500" data-aos="fade-up" data-aos-delay="100">Veja a satisfação de nossos clientes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Review 1 -->
+            <div class="review-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-yellow-500 mb-3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-300 italic mb-4">"Toda a equipe muito atenciosa desde a chegada até a entrega do veículo. Serviço nota 10!"</p>
+                <h4 class="font-bold text-blue-500">— Antonio Chicre</h4>
+            </div>
+            <!-- Review 2 -->
+            <div class="review-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-yellow-500 mb-3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-300 italic mb-4">"Serviço top, muito bom... Equipe ótima, bem atenciosos! 👏👏👏"</p>
+                <h4 class="font-bold text-blue-500">— Rhuan Canto Dias</h4>
+            </div>
+            <!-- Review 3 -->
+            <div class="review-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-yellow-500 mb-3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-300 italic mb-4">"A lavagem foi excelente, gostei bastante.. vcs são nota mil.. o carro ficou super limpinho, parabéns.. vou voltar mais vezes"</p>
+                <h4 class="font-bold text-blue-500">— Emanuelle Rodrigues</h4>
+            </div>
+            <!-- Review 4 -->
+            <div class="review-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-yellow-500 mb-3">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-gray-300 italic mb-4">"Excelente atendimento!! Meu carro ficou impecável, veio muito cheiroso. Nota 10!!"</p>
+                <h4 class="font-bold text-blue-500">— Rosiele Veríssimo</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-24 bg-[#0f0f0f] px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold mb-6">Onde <span class="text-blue-500">estamos</span></h2>
+                    <p class="text-gray-400 mb-8 text-lg">
+                        Estamos localizados em Palhoça, prontos para receber seu veículo e proporcionar a melhor experiência de estética automotiva.
+                    </p>
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-blue-500/20 p-3 rounded-full text-blue-500">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p class="text-gray-300">R. Jorge Corino da Luz, 163 - Passa Vinte, Palhoça - SC</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-blue-500/20 p-3 rounded-full text-blue-500">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <p class="text-gray-300">(48) 99653-1002</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5548996531002" target="_blank" class="btn-primary px-8 py-4 rounded-full text-lg font-bold inline-flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                    </a>
+                </div>
+                <div data-aos="fade-left" class="h-[400px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                    <!-- Google Maps Embed -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.4723478219!2d-48.654471!3d-27.656547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664399999999999%3A0x0!2zUi4gSm9yZ2UgQ29yaW5vIGRhIEx1eiwgMTYzIC0gUGFzc2EgVmludGUsIFBhbGhvY2HDoW1hIC0gU0wsIDg4MTMzLTEzMA!5f0!4m2!1m1!1s0x0%3A0x0!3m2!1s0x0%3A0x0!4m2!1m1!1s0x0%3A0x0!2zRSIuIEpvcmdlIUNvcmlubyBkYSBMdXosIDE2MyAtIFBhc3NhIFZpbnRlLCBQYWxob2XDoW1hIC0gU0wsIDg4MTMzLTEzMA!5f0!4m2!1m1!1s0x0%3A0x0!2zRSIuIEpvcmdlIUNvcmlubyBkYSBMdXosIDE2MyAtIFBhc3NhIFZpbnRlLCBQYWxob2XDoW1hIC0gU0wsIDg8MTMzLTEzMA!5f0"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <!-- Note: I've used a placeholder URL structure for the map since I can't generate a live dynamic one, but it's configured to show the general area of the address provided -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5 text-center">
+        <div class="text-2xl font-extrabold mb-6">
+            CANTO <span class="text-blue-500">ESTÉTICA</span>
+        </div>
+        <p class="text-gray-600 text-sm">
+            &copy; 2026 Canto Estética Automotiva. Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+</body>
+</html>
